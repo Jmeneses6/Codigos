@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="Formulario.css" />
+    <link rel="icon" href="Img/medical_record_icon_150134.png" >
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <p>Por favor rellena todos los datos pedidos</p>
+    <form method="post" action=''>
+      <fieldset>
+        <label for="first-name">Ingresa tu primer nombre: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Ingresa tu apellido: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Ingresa tu Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crea una nueva contraseña: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Cuenta personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Cuenta de empresa</label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> Acepto los <a target="_blank" href="">términos y condiciones</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Sube una foto de perfil: <input id="profile-picture" type="file" name="file" required/></label>
+        <label for="age">Ingresa tu edad (Años): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="gender">Ingresa tu genero
+          <select id="gender" name="gender" required>
+            <option value="">Elige uno</option>
+            <option value="1">Hombre</option>
+            <option value="2">Mujer</option>
+            <option value="3">Otro</option>
+          </select>
+        </label>
+        <label for="referrer">Como te enteraste de nosotros? (opcional)
+          <select id="referrer" name="referrer">
+            <option value="">Elige uno</option>
+            <option value="1">X</option>
+            <option value="2">X</option>
+            <option value="3">X</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Ingresa una corta biografía: 
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gusta programar de noche..." required></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Enviar"/> 
+    </form>
+  </body>
+</html>
